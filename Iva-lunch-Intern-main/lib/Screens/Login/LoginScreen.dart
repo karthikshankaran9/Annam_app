@@ -328,7 +328,7 @@ class _LoginscreenState extends State<Loginscreen> {
                                       .unfocus(); // Dismiss keyboard
                                   context.read<AuthBloc>().add(
                                         AuthenticateUser(
-                                          userName: Usernametexteditor.text.trim(),
+                                          username: Usernametexteditor.text.trim(),
                                           password: PasswordTextController.text.trim(),
                                         ),
                                       );

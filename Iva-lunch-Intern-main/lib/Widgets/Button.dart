@@ -17,7 +17,6 @@ class Button extends StatefulWidget {
       required this.textColor,
       required this.textStyle,
       required this.size,
-      
       required this.customWidget});
 
   @override

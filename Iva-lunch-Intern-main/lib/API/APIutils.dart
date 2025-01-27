@@ -1,7 +1,4 @@
 
-
-
-
 import 'dart:convert';
 
 List<Map<String, String>> setDataForPOST(List<DateTime> datetimeList) {

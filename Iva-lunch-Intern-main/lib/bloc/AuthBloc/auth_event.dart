@@ -4,7 +4,7 @@ part of 'auth_bloc.dart';
 sealed class AuthEvent {}
 
 final class AuthenticateUser extends AuthEvent {
-  String userName;
+  String username;
   String password;
-  AuthenticateUser({required this.userName, required this.password});
+  AuthenticateUser({required this.username, required this.password});
 }

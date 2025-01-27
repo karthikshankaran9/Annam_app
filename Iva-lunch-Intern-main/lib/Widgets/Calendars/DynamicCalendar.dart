@@ -230,13 +230,6 @@ class _DynamicCalendarState extends State<DynamicCalendar> {
         // }
 
 
-
-
-
-
-
-
-
         return TableCalendar(
           firstDay: firstDayOfMonth,
           lastDay: lastDayOfMonth,

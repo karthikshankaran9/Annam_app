@@ -18,7 +18,6 @@ void ShowSelectorCalendar(BuildContext context) {
         //   "Select Date",
         //   style: const TextStyle(color: Colors.white),
         // ),
-
         content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
@@ -74,10 +73,6 @@ void ShowSelectorCalendar(BuildContext context) {
                   .read<CalendarBloc>()
                   .add(NoChangeInDynamicCalendar(context: context));
               Navigator.pop(context);
-
-              // setState(context){
-
-              // } // Close the dialog
             },
             child: SizedBox(
                 height: 30,

@@ -27,7 +27,7 @@ class _AutologgerState extends State<Autologger> {
     //  Future.delayed(Duration(seconds: 3));
     // print("tempusername"+temppassword.toString());
     // print("temp username"+ tempusername);
-    context.read<AuthBloc>().add(AuthenticateUser(userName: UserName , password: Password));
+    context.read<AuthBloc>().add(AuthenticateUser(username: UserName , password: Password));
   }
 
   @override

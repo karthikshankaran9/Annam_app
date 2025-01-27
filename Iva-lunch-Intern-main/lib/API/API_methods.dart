@@ -13,10 +13,12 @@ import 'package:http/http.dart' as http;
 //NOTE NOTE : login function is avaibale in the AuthbLoc page 
 
 //returns the user datails
-Future<Map<String,dynamic>> Get_user_details(int id) async {
+Future<Map<String,dynamic>> Get_user_details(int Id) async {
  
-      final url = Uri.parse('${Baseurl.toString()}/api/User/GetUserDetail/$id');
-      final headers = {'Content-Type': 'application/json','Authorization' : 'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}'};
+      final url = Uri.parse('${Baseurl.toString()}/api/User/GetUserDetail/$Id');
+      final headers = {'Content-Type': 'application/json',
+      //'Authorization' : 'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}'
+      };
           
       final response = await http.get(url, headers: headers);
 
@@ -39,16 +41,13 @@ Future<Map<String,dynamic>> Get_user_details(int id) async {
 }
 
 
-
-
-
 //Returns no of order completed by the user for that particular month
-Future<int> Get_orders_completed(int id) async {
+Future<int> Get_orders_completed(int Id) async {
   try {
-    final url = Uri.parse('${Baseurl.toString()}/api/User/GetEmployeeLunchCount/${id.toString()}');
+    final url = Uri.parse('${Baseurl.toString()}/api/User/GetEmployeeLunchCount/${Id.toString()}');
     final headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}',
+      //'Authorization': 'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}',
     };
 
     final response = await http.get(url, headers: headers);
@@ -73,10 +72,12 @@ Future<int> Get_orders_completed(int id) async {
 }
 
 
-Future<List<DateTime>> Get_Pre_Orders(int id) async {
+Future<List<DateTime>> Get_Pre_Orders(int Id) async {
  
-      final url = Uri.parse('${Baseurl.toString()}/api/User/GetPreOrders/$id');
-      final headers = {'Content-Type': 'application/json','Authorization' : 'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}'};
+      final url = Uri.parse('${Baseurl.toString()}/api/User/GetPreOrders/$Id');
+      final headers = {'Content-Type': 'application/json',
+      //'Authorization' :'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}'
+      };
           
       final response = await http.get(url, headers: headers);
 
@@ -101,16 +102,16 @@ Future<List<DateTime>> Get_Pre_Orders(int id) async {
 
 
 
-Future<List<DateTime>> pushPreLunchDetail(int id, List<DateTime> dateList) async {
+Future<List<DateTime>> pushPreLunchDetail(int Id, List<DateTime> dateList) async {
   try {
     final url = Uri.parse('${Baseurl.toString()}/api/User/GetPreLunchDetail');
     final headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}',
+      //'Authorization': 'Basic ${base64Encode(utf8.encode('$Authusername:$Authpassword'))}',
     };
 
     final body = jsonEncode({
-      'id': id.toString(),
+      'id': Id.toString(),
       'DateList': dateList.map((date) => {'date': date.toIso8601String()}).toList(),
     });
 

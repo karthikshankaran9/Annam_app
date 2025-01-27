@@ -117,13 +117,7 @@ class _HomePageState extends State<HomePage> {
                         const UserLogButton(),
                       ]),
                   const SizedBox(height: 16),
-                  // Container(
-                  //  constraints: BoxConstraints(
-                  //       maxHeight: 400.0, // Adjust height as needed
-                  //       maxWidth: 400.0, // Adjust width as needed
-                  //     ),
-
-                  //   child: StaticCalendarView()),
+                  // Replace with an appropriate widget
                   Container(
                     child: BlocBuilder<CalendarBloc, CalendarState>(
                       builder: (context, state) {
@@ -153,8 +147,8 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Button(
                           Navigation: () {
-                            //  Navigator.pop(context);
-                            //ShowSelectorCalendar(context);
+                            // Navigator.pop(context);
+                            // ShowSelectorCalendar(context);
                             context
                                 .read<CalendarBloc>()
                                 .add(ShowDynamicCalendar());
@@ -165,21 +159,9 @@ class _HomePageState extends State<HomePage> {
                           size: const Size(150, 40),
                           customWidget: Text("Order/Modify",
                               style: Ksecondarytext.copyWith(
-                                  color: Colors.white),textAlign: TextAlign.center,)),
+                               color: Colors.white),textAlign: TextAlign.center,)),
                     ],
                   ),
-                  
-                  
-
-                  // Column(
-                  //     crossAxisAlignment: CrossAxisAlignment.center,
-                  //     mainAxisAlignment: MainAxisAlignment.end,
-                  //     children: [
-                  //       Image.asset("assets/bottomImage/annamImage.png",scale: 3,),
-                  //     ],
-                  //   ),
-                
-            // The element that should stick to the bottom
                 
                 ],
               ),
